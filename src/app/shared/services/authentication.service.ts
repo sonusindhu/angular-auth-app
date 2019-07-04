@@ -6,10 +6,10 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { tap, map, switchMap, catchError } from 'rxjs/operators';
 //import { AuthService } from 'ngx-auth';
 
-import { User } from "@app/models/User";
+import { User } from "@app/core/models/User";
 import { NgxPermissionsService } from 'ngx-permissions';
 
-import { environment } from '../../../environments/environment';
+import { environment } from '@environments/environment';
 
 @Injectable()
 export class AuthenticationService {
