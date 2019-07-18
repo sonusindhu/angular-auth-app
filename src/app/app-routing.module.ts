@@ -19,7 +19,7 @@ const routes: Routes = [
     ]
   },
     
-  { path: 'login', loadChildren: () => import('@app/auth/login/login.module').then(m => m.LoginModule) },
+  { path: 'auth', loadChildren: () => import('@app/auth/auth.module').then(m => m.AuthModule) },
   { path: 'notfound', component: NotFoundComponent },
   { path: 'noaccess', component: NoAccessComponent },
   { path: '**', redirectTo: 'notfound' }
