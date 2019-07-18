@@ -12,7 +12,7 @@ import { ErrorInterceptor } from '@app/shared/interceptors/error.interceptor';
 import { JwtInterceptor } from '@app/shared/interceptors/jwt.interceptor';
 
 import { AuthenticationService } from '@app/shared/services/authentication.service';
-import { DataService } from '@app/shared/services/data.service';
+import { GridService } from '@app/shared/services/grid.service';
 
 import { AppComponent } from '@app/app.component';
 import { HomeComponent } from '@app/home/home.component';
@@ -21,6 +21,11 @@ import { AppHeaderComponent } from '@app/_layouts/app-header/app-header.componen
 import { AppFooterComponent } from '@app/_layouts/app-footer/app-footer.component';
 import { NotFoundComponent } from '@app/auth/not-found/not-found.component';
 import { NoAccessComponent } from '@app/auth/no-access/no-access.component';
+
+
+//Angular Material Components
+import { MaterialModule } from '@app/material-module.ts';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +40,8 @@ import { NoAccessComponent } from '@app/auth/no-access/no-access.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MaterialModule,
+
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -49,7 +56,7 @@ import { NoAccessComponent } from '@app/auth/no-access/no-access.component';
     AppRoutingModule,
   ],
   providers: [
-    DataService, 
+    GridService, 
     AuthenticationService,
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }

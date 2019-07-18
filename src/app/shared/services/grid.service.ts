@@ -15,7 +15,7 @@ import { Observable } from 'rxjs';
 import { environment } from '@environments/environment';
 
 @Injectable()
-export class DataService {
+export class GridService {
     private BASE_URL: string = environment.API_URL;
 
     constructor(private http: HttpClient) { }

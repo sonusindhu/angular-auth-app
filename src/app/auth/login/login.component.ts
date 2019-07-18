@@ -26,7 +26,7 @@ export class LoginComponent {
       .login(data).subscribe(
         data => {
           this.submitted = false;
-          this.router.navigateByUrl('/receiptlist')
+          this.router.navigateByUrl('/')
         },
         error => {
           this.submitted = false;
