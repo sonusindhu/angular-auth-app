@@ -19,13 +19,8 @@ import { HomeComponent } from '@app/home/home.component';
 import { AppLayoutComponent } from '@app/_layouts/app-layout/app-layout.component';
 import { AppHeaderComponent } from '@app/_layouts/app-header/app-header.component';
 import { AppFooterComponent } from '@app/_layouts/app-footer/app-footer.component';
-import { NotFoundComponent } from '@app/auth/not-found/not-found.component';
-import { NoAccessComponent } from '@app/auth/no-access/no-access.component';
-
-
-//Angular Material Components
-import { MaterialModule } from '@app/material-module.ts';
-
+import { NotFoundComponent } from '@app/core/not-found/not-found.component';
+import { NoAccessComponent } from '@app/core/no-access/no-access.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +35,6 @@ import { MaterialModule } from '@app/material-module.ts';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
-
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,

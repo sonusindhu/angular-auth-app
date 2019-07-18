@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppLayoutComponent } from '@app/_layouts/app-layout/app-layout.component';
 import { HomeComponent } from '@app/home/home.component';
-import { NotFoundComponent } from '@app/auth/not-found/not-found.component';
-import { NoAccessComponent } from '@app/auth/no-access/no-access.component';
+import { NotFoundComponent } from '@app/core/not-found/not-found.component';
+import { NoAccessComponent } from '@app/core/no-access/no-access.component';
 
 import { AuthGuard } from '@app/auth/guards/auth-guard';
 
